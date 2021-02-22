@@ -51,3 +51,36 @@ console.log(frutas)
 // Substituindo 6ª fruta
 frutas.splice(5, 1, 'abacate')
 console.log(frutas)
+
+/*
+***
+*Percurso de vetores
+*/
+
+//1 - percurso tradicional via for
+for(let i = 0; i < frutas.length; i++){
+    console.log(i, frutas[i])
+}
+
+console.log('**')
+
+//ordem inversa
+for(let i = frutas.length - 1; i >= 0; i--){
+    console.log(i, frutas[i])
+}
+
+console.log('**')
+
+//2 - percurso usando for of...
+//não há necessidade de manter uma variavel de controle (i)
+for(let fruta of frutas){
+    console.log(fruta)
+}
+
+//3 - percurso via ForEach
+frutas.forEach(function(fruta){
+    console.log(fruta)
+})
+
+//metodo simplificado
+frutas.forEach(fruta => console.log(elemento))
